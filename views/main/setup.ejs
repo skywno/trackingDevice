@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="setup_page.css"> -->
+    <title>Document</title>
+    <script src="/Test/setup.js"></script>
+    
+</head>
+<body>
+   
+<script> 
+    function validateForm() {
+    var x = document.forms["myForm"]["exhibition_name"].value;
+    var y = document.forms["myForm"]["space_name"].value;
+    var valueDate = document.getElementById('Start').value;
+    var valueDat = document.getElementById('End').value;
+    var valueline = document.getElementById('devicelist').value;
+    if ((Date.parse(valueDat) <= Date.parse(valueDate))) {
+        document.getElementById("End").innerText = "End Date should be greater than From Date....!";
+        document.getElementById("End").value = "";
+        alert("End Date should be greater than From Date");
+        return false;
+    }
+    if (x == "" || x == null || y == "" || y == null || (!Date.parse(valueline)) || (!Date.parse(valueDate)) || (!Date.parse(valueDat))) {
+        alert("Name must be filled out");
+        return false;
+    }
+   }
+    
+</script>
+
+     <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="http://localhost:3001/" >Log in</a>
+        <a href="#" id="selected">Set Up</a>
+        <a href="http://localhost:3001/current">Current Exhibitions</a>
+        <li><a href="http://localhost:3001/arc">Archive</a></li>
+        <a href="#">Log Out</a>
+    </div>
+
+  
+    <!-- Page content -->
+    <form name="myForm" onsubmit="return validateForm()"  method="post" >
+        
+        <div class="name">
+            Exhibition name: <input type="text" id="exhibition_name" name="exhibition_name"  class="form-control">
+        </div>
+
+        <div class="name" id="space">
+            <p>Space name</p>
+            <input type="text" id="space_name" name = "space_name"  class="form-control"> 
+        </div>
+
+        <div class="date">
+            <div><p>Start date</p>
+                <input type="date" name="Start" id="Start"/>
+            </div>
+            <div><p>End date</p>
+                <input type="date" name="End" id="End" class="form-control"/>
+        </div>
+
+        <div class="main">
+            <p id="setuptxt">Set Up Your Device </p>
+            <div id="1stLine">
+                <div>
+                    <!--<button onclick="dropdwn_func()" class="dropbtn">Select Device <img src="arrow.svg" alt=" " onclick="dropdwn_func()"> </button>-->
+                    <select id="devicelist" name = "devicelist" class="dropdown-content">
+                        <!--We need to have some type of data base where all free devices are listed-->
+                        <option href="#">Select a Device</option>
+                        <option href="#">Example Device 1</option>
+                        <option href="#">Example Device 2</option>
+                        <option href="#">Example Device 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="Setup_button">
+            <button type="submit" class="btn btn-success">Set up</button>
+        </div>
+     
+    </form>
+
+</body>
+</html>

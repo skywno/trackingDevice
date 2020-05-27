@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='login.css' />
+</head>
+<body>
+    <script src="login_page.js"></script>
+     <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="#" id="selected">Log in</a>
+        <a href="http://localhost:3001/setup">Set Up</a>
+        <a href="http://localhost:3001/current">Current Exhibitions</a>
+        <a href="http://localhost:3001/arc">Archive</a>
+        <a href="#">Log Out</a>
+    </div>
+  
+    <!-- Page content -->
+    <div class="main">
+        <div class="Welcome">
+            <p id="Welcomep">Welcome to the visitor tracker website</p>
+            <p id="Logintext">Log in required to edit data and set up new counters</p>
+        </div>
+        <div class="Login_boxes" id="Login_boxes">
+            <p>Name</p>
+            <input type="name">
+            <br>
+            <p id="pwd">Password</p>
+            <input type="password">
+        </div>
+        <div onclick="myFunction()" id="Login_button">
+            <a href="#">Log in</a>
+        </div>
+    </div> 
+</body>
+</html>

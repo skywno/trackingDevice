@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='archive.css' />
+    <title>Document</title>
+</head>
+<body>
+    <script src="archive.js"></script>
+     <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="http://localhost:3001/">Log in</a>
+        <li><a href="http://localhost:3001/setup">Set Up</a></li>
+        <a href="http://localhost:3001/current">Current Exhibitions</a>
+        <a href="#" id="selected">Archive</a>
+        <a href="#">Log Out</a>
+    </div>
+  
+    <!-- Page content -->
+    <div class="main">
+        <div id="pad">Archive</div>
+        <table style="border-top: solid rgb(61, 61, 61); border-collapse: collapse;">
+            <tr id="top">
+              <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">Exhibition name</th>
+              <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">Dates</th>
+              <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">Visitor count</th>
+              <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">Delete</th>
+            </tr>
+            <tr>
+                <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">Example name</th>
+                <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">11.-21.11.2011</th>
+                <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;">309</th>
+                <th style="border: 1px solid rgb(105, 111, 119); border-collapse: collapse;"><a id="del" onclick="del_func()">X</a></th>
+              </tr>
+        </table> 
+    </div> 
+</body>
+</html>

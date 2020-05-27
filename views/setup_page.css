@@ -1,0 +1,174 @@
+ /* The sidebar menu */
+  @font-face {
+    font-family: regular;
+    src: url(RobotoCondensed-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: bold;
+    src: url(RobotoCondensed-Bold.ttf);
+  }
+
+ .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(10, 9, 7, 0.863); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  #selected{
+    background-color: rgba(76, 79, 83, 0.733);
+    color: #c5cbd1;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 16px 8px 16px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: bold;
+    color: rgb(154, 162, 173);
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    font-family: regular;
+    margin-left: 160px; /* Same as the width of the sidebar */
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+  }
+
+  /* The navigation menu links */
+  #Setup_button {
+    padding: 8px 10px 8px 14px;
+    text-decoration: none;
+    background-color:  #f1f1f1;
+    font-size: 25px;
+    font-family: bold;
+    display: block;
+    border-radius: 8px;
+  }
+
+  #Setup_button:hover {
+    background-color:  rgba(172, 172, 172, 0.863);
+  }
+
+  .name{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .name input{
+    width: 300%;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 500px;
+  }
+
+  .date p{
+    font-size: 18px;
+  }
+
+  .date div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+  }
+
+  #end{
+    padding-left: 90px;
+  }
+
+  #setuptxt{
+    padding-top: 60px;
+    font-family: bold;
+    color: rgba(41, 41, 214, 0.911);
+  }
+
+  /* When you mouse over the navigation links, change their color */
+
+  .main a{
+    text-decoration: none;
+    color: rgb(44, 42, 42);
+  }
+
+  .device {
+    padding-top: 150px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background-color: rgb(240, 240, 240);
+    color: rgb(8, 8, 8);
+    padding: 6px;
+    font-size: 16px;
+    border: black 2px;
+    cursor: pointer;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    font-size: 14px;
+    color: black;
+    padding: 6px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover{
+    background-color: rgb(170, 179, 190);
+  }
+
+  #setup {
+    padding-bottom: 30px;
+    font-size: 24px;
+    width: 120px;
+  }
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } 
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  /*.show {display:block;}*/
